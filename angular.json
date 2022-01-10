@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -99,6 +100,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -111,6 +113,16 @@
               "src/**/*.ts",
               "src/**/*.html"
             ]
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "app-ng-ecommerce:build:production",
+            "firebaseProject": "app-ecommerce-6f5ee",
+            "firebaseHostingSite": "app-ecommerce-6f5ee"
           }
         }
       }

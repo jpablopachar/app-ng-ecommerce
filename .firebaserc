@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app-ecommerce-6f5ee": {
+      "hosting": {
+        "app-ng-ecommerce": [
+          "app-ecommerce-6f5ee"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app-ecommerce-6f5ee"
+  }
+}
