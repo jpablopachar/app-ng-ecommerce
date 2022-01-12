@@ -10,6 +10,7 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProfileModule } from './pages/profile/profile.module';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { HeaderComponent } from './components/header/header.component';
     provideFirestore((): Firestore => getFirestore()),
     StoreModule.forRoot({}, {}),
     EffectsModule.forRoot([]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    ProfileModule
   ],
   providers: [],
   bootstrap: [AppComponent]
