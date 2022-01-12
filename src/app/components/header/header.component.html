@@ -1,0 +1,23 @@
+<div class="header">
+  <div class="header__title" routerLink="/">Ecommerce Vaxi Drez</div>
+  <div class="header__navigation">
+    <div *ngIf="!isAuthorized">
+      <a
+        class="app-a"
+        routerLink="auth/registration"
+        routerLinkActive="app-a_active"
+        >Registrar</a
+      >
+      <a class="app-a" routerLink="auth/login" routerLinkActive="app-a_active"
+        >Log In</a
+      >
+    </div>
+    <a class="app-a" routerLink="demo" routerLinkActive="app-a_active">Demo</a>
+    <div *ngIf="isAuthorized">
+      <a class="app-a" routerLink="jobs">Trabajos</a>
+      <a class="app-a" routerLink="employees">Empleados</a>
+      <a class="app-a">Perfil</a>
+      <a class="app-a">Salir Sesion</a>
+    </div>
+  </div>
+</div>

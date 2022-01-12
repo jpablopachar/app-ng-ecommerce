@@ -16,8 +16,8 @@
       },
       "extends": [
         "plugin:@angular-eslint/recommended",
-        "plugin:@angular-eslint/template/process-inline-templates",
-        "plugin:ngrx/recommended"
+        "plugin:@angular-eslint/template/process-inline-templates"
+        // "plugin:ngrx/recommended"
       ],
       "rules": {
         "@angular-eslint/directive-selector": [
@@ -36,9 +36,16 @@
             "style": "kebab-case"
           }
         ]
+        /* "ngrx/select-style": [
+          "warn",
+          "operator"
+        ],
+        "ngrx/prefer-one-generic-in-create-for-feature-selector": "off",
+        "ngrx/prefer-inline-action-props": "off",
+        "ngrx/prefix-selectors-with-select": "off" */
       },
       "plugins": [
-        "ngrx"
+        // "ngrx"
       ]
     },
     {
