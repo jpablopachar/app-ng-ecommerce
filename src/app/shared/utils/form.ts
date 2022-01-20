@@ -1,4 +1,4 @@
-import { ControlItem } from 'src/app/models';
+import { ControlItem } from "@app/models/client";
 
 export const markFormGroupTouched: (formGroup: any) => void = (
   formGroup: any

@@ -12,7 +12,7 @@ import { DomSanitizer, SafeStyle } from '@angular/platform-browser';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .photo {
         width: 80px;

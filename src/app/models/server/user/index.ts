@@ -3,7 +3,7 @@ import { FieldValue } from 'firebase/firestore';
 import { Employee, Recruiter } from './roles';
 
 export interface User {
-  uuid: string;
+  uid: string;
   name: string | null;
   photoURL: string | null;
   email: string;

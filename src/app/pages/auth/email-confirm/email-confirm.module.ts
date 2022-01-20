@@ -1,9 +1,7 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { EmailConfirmRoutingModule } from './email-confirm-routing.module';
+import { NgModule } from '@angular/core';
 import { EmailConfirmComponent } from './components/email-confirm.component';
-
+import { EmailConfirmRoutingModule } from './email-confirm-routing.module';
 
 @NgModule({
   declarations: [

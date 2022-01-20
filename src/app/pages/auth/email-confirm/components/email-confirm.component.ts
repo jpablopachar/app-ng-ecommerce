@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-email-confirm',
@@ -7,14 +7,8 @@ import { Component, OnInit } from '@angular/core';
       email-confirm works!
     </p>
   `,
-  styles: [
-  ]
+  styles: []
 })
-export class EmailConfirmComponent implements OnInit {
-
+export class EmailConfirmComponent {
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

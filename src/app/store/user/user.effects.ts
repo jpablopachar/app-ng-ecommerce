@@ -252,10 +252,10 @@ export class UserEffects {
           (
             user: User
           ): Observable<fromActions.CreateSuccess | fromActions.CreateError> =>
-            from(this._afs.collection('users').doc(user.uuid).set(user)).pipe(
+            from(this._afs.collection('users').doc(user.uid).set(user)).pipe(
               tap(
                 (): Promise<boolean> =>
-                  this._router.navigate(['/profile', user.uuid])
+                  this._router.navigate(['/profile', user.uid])
               ),
               map(
                 (): fromActions.CreateSuccess =>
@@ -284,10 +284,10 @@ export class UserEffects {
           (
             user: User
           ): Observable<fromActions.UpdateSuccess | fromActions.UpdateError> =>
-            from(this._afs.collection('users').doc(user.uuid).set(user)).pipe(
+            from(this._afs.collection('users').doc(user.uid).set(user)).pipe(
               tap(
                 (): Promise<boolean> =>
-                  this._router.navigate(['/profile', user.uuid])
+                  this._router.navigate(['/profile', user.uid])
               ),
               map(
                 (): fromActions.UpdateSuccess =>

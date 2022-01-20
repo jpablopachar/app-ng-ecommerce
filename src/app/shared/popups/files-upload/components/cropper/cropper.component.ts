@@ -23,7 +23,7 @@ import { dataURLtoFile } from '../../utils';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .cropper {
         &__content {
