@@ -11,7 +11,7 @@ import {
   AngularFireStorageReference,
   AngularFireUploadTask
 } from '@angular/fire/compat/storage';
-import firebase from 'firebase/compat';
+import firebase from 'firebase/compat/app';
 import { lastValueFrom, Observable, Subject } from 'rxjs';
 import { finalize, takeUntil } from 'rxjs/operators';
 

@@ -56,7 +56,7 @@ import { AbstractControl } from '@angular/forms';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .form-field {
         padding-bottom: 8px;

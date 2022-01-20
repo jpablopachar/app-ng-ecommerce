@@ -1,7 +1,16 @@
 <div class="header">
   <div class="header__title" routerLink="/">Ecommerce Vaxi Drez</div>
   <div class="header__navigation">
-    <div *ngIf="!isAuthorized">
+    <a
+        class="app-a"
+        routerLink="auth/registration"
+        routerLinkActive="app-a_active"
+        >Register</a
+      >
+      <a class="app-a" routerLink="auth/login" routerLinkActive="app-a_active"
+        >Log In</a
+      >
+    <!-- <div *ngIf="!isAuthorized">
       <a
         class="app-a"
         routerLink="auth/registration"
@@ -11,13 +20,17 @@
       <a class="app-a" routerLink="auth/login" routerLinkActive="app-a_active"
         >Log In</a
       >
-    </div>
+    </div> -->
     <a class="app-a" routerLink="demo" routerLinkActive="app-a_active">Demo</a>
-    <div *ngIf="isAuthorized">
+    <a class="app-a" routerLink="jobs">Jobs</a>
+    <a class="app-a" routerLink="employees">Employees</a>
+    <a class="app-a" routerLink="profile">Profile</a>
+    <a class="app-a">Log out</a>
+    <!-- <div *ngIf="isAuthorized">
       <a class="app-a" routerLink="jobs">Trabajos</a>
       <a class="app-a" routerLink="employees">Empleados</a>
       <a class="app-a">Perfil</a>
       <a class="app-a">Salir Sesion</a>
-    </div>
+    </div> -->
   </div>
 </div>

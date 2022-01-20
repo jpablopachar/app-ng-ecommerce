@@ -5,7 +5,7 @@ import {
   Input, Output
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ControlItem, Value } from 'src/app/models';
+import { ControlItem, Value } from '@app/models/client';
 
 @Component({
   selector: 'app-radio',
@@ -27,7 +27,7 @@ import { ControlItem, Value } from 'src/app/models';
   </div>`,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .radio {
         display: block;

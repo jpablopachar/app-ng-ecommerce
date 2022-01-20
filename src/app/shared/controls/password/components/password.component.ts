@@ -27,7 +27,7 @@ type PasswordType = 'password' | 'text';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
       .password {
         display: flex;
 

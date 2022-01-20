@@ -12,6 +12,7 @@ import {
   FormControl,
   NG_VALUE_ACCESSOR
 } from '@angular/forms';
+import { ControlItem } from '@app/models/client';
 import { Observable, Subject } from 'rxjs';
 import {
   distinctUntilChanged,
@@ -20,7 +21,6 @@ import {
   startWith,
   takeUntil
 } from 'rxjs/operators';
-import { ControlItem } from 'src/app/models';
 
 @Component({
   selector: 'app-autocomplete',
@@ -30,7 +30,7 @@ import { ControlItem } from 'src/app/models';
         class="app-input"
         type="text"
         #search
-        [placeholder]="placeholder || 'Ingrese una busqueda'"
+        [placeholder]="placeholder || 'Enter a search'"
         [formControl]="form"
         [matAutocomplete]="auto"
         (blur)="onBlur()"
@@ -52,7 +52,7 @@ import { ControlItem } from 'src/app/models';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .autocomplete {
         position: relative;

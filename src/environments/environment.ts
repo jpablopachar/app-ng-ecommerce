@@ -12,6 +12,10 @@ export const environment = {
     apiKey: 'AIzaSyDoRTPjRwxv5rMfXfdwnxS_XvImMzjh588',
     authDomain: 'app-ecommerce-6f5ee.firebaseapp.com',
     messagingSenderId: '148403055373',
+  },
+  actionCodeSettings: {
+    url: 'http://localhost:4200/profile/new',
+    handleCodeInApp: true
   }
 };
 

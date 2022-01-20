@@ -29,7 +29,7 @@ import { MatDatepickerInputEvent } from '@angular/material/datepicker';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .date {
         display: inline-flex;

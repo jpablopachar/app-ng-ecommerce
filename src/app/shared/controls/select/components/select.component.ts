@@ -6,7 +6,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatSelectChange } from '@angular/material/select';
-import { ControlItem, Value } from 'src/app/models';
+import { ControlItem, Value } from '@app/models/client';
 
 @Component({
   selector: 'app-select',
@@ -26,7 +26,7 @@ import { ControlItem, Value } from 'src/app/models';
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .select {
         line-height: 36px;

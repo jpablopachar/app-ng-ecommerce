@@ -49,7 +49,7 @@ export interface Placeholder {
   `,
   styles: [
     `
-      @import 'styles/colors';
+      @import 'src/styles/base/colors';
 
       .date-range {
         &__items {
