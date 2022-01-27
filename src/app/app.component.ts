@@ -13,16 +13,16 @@ export class AppComponent implements OnInit {
   public isAuthorized$!: Observable<boolean>;
   public user$!: Observable<fromUser.User>;
 
-  constructor(private readonly store: Store<fromRoot.State>) {}
+  constructor(private readonly _store: Store<fromRoot.State>) {}
 
   ngOnInit(): void {
-    this.user$ = this.store.pipe(select(fromUser.getUser)) as Observable<fromUser.User>;
-    this.isAuthorized$ = this.store.pipe(select(fromUser.getIsAuthorized))
-    this.store.dispatch(new fromUser.Init());
-    this.store.dispatch(new fromDictionaries.Read());
+    this.user$ = this._store.pipe(select(fromUser.getUser)) as Observable<fromUser.User>;
+    this.isAuthorized$ = this._store.pipe(select(fromUser.getIsAuthorized))
+    this._store.dispatch(new fromUser.Init());
+    this._store.dispatch(new fromDictionaries.Read());
   }
 
   public onSignOut() : void {
-    this.store.dispatch(new fromUser.SignOut());
+    this._store.dispatch(new fromUser.SignOut());
   }
 }

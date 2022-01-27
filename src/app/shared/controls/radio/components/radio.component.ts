@@ -121,7 +121,7 @@ export class RadioComponent implements ControlValueAccessor {
 
   constructor() {
     this.changed = new EventEmitter<Value>();
-    this.isDisabled = true;
+    this.isDisabled = false;
   }
 
   public writeValue(value: Value): void {

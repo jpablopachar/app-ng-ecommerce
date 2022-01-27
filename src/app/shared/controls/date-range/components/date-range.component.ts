@@ -29,7 +29,7 @@ export interface Placeholder {
           <app-date
             formControlName="from"
             (closed)="onClosed()"
-            [placeholder]="placeholder?.from || 'Desde'"
+            [placeholder]="placeholder?.from || 'From'"
             (changed)="onChanged()"
             [max]="max"
           >
@@ -38,7 +38,7 @@ export interface Placeholder {
           <app-date
             formControlName="to"
             (closed)="onClosed()"
-            [placeholder]="placeholder?.to || 'Hasta'"
+            [placeholder]="placeholder?.to || 'To'"
             (changed)="onChanged()"
             [min]="min"
           >

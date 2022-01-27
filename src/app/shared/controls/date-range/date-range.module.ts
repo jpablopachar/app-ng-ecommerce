@@ -10,8 +10,8 @@ import { DateRangeComponent } from './components/date-range.component';
   ],
   imports: [
     CommonModule,
-    DateModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DateModule
   ],
   exports: [
     DateRangeComponent

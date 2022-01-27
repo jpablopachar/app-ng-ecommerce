@@ -1,20 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Recruiter } from '../../../../../../store/user';
 
 @Component({
   selector: 'app-recruiter',
   template: `
-    <p>
-      recruiter works!
-    </p>
+    <p><b>Company:</b>{{ role.companyName }}</p>
+    <p><b>Employees cant:</b>{{ role.employeesCount }}</p>
   `,
-  styles: [
-  ]
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class RecruiterComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class RecruiterComponent {
+  @Input() role!: Recruiter | any;
 }

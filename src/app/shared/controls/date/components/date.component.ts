@@ -1,8 +1,8 @@
 import {
   Component,
-  EventEmitter, Input, Output
+  EventEmitter, forwardRef, Input, Output
 } from '@angular/core';
-import { ControlValueAccessor } from '@angular/forms';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { MatDatepickerInputEvent } from '@angular/material/datepicker';
 
 @Component({
@@ -22,7 +22,7 @@ import { MatDatepickerInputEvent } from '@angular/material/datepicker';
         [max]="max"
         placeholder="{{ placeholder || 'Select a date' }}"
       />
-      <mat-datepicker-toggle matSuffix [for]="picker" disabled="isDisabled">
+      <mat-datepicker-toggle matSuffix [for]="picker" [disabled]="isDisabled">
       </mat-datepicker-toggle>
       <mat-datepicker #picker (closed)="onClosed()"></mat-datepicker>
     </div>
@@ -42,6 +42,11 @@ import { MatDatepickerInputEvent } from '@angular/material/datepicker';
       }
     `,
   ],
+  providers: [{
+    provide: NG_VALUE_ACCESSOR,
+    useExisting: forwardRef((): typeof DateComponent => DateComponent),
+    multi: true
+  }]
 })
 export class DateComponent implements ControlValueAccessor {
   @Input() placeholder!: string;

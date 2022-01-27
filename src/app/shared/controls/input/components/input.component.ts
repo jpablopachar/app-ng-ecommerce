@@ -39,7 +39,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class InputComponent implements ControlValueAccessor {
   @Input() placeholder!: string;
-  @Output() changed;
+  @Output() changed: EventEmitter<string>;
 
   public value: string;
   public isDisabled: boolean;

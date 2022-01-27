@@ -207,7 +207,7 @@ export class UserEffects {
             | Observable<fromActions.InitUnAuthorized> => {
             if (authState) {
               return this._afs
-                .doc(``)
+                .doc<User>(`users/${authState.uid}`)
                 .valueChanges()
                 .pipe(
                   take(1),
