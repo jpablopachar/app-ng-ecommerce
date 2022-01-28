@@ -36,6 +36,11 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'jobs',
+        loadChildren: (): Promise<any> => import('./pages/jobs/jobs.module').then( m => m.JobsModule),
+        canActivate: [AuthGuard]
+      },
+      {
         path: '',
         pathMatch: 'full',
         redirectTo: 'static/wellcome',
